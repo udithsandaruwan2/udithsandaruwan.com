@@ -4,9 +4,17 @@ import { Briefcase, GraduationCap } from 'lucide-react';
 const Experience = () => {
     const experiences = [
         {
-            title: 'Instructor',
+            title: 'Trainee Software Engineer',
+            company: 'Seylan Bank PLC',
+            period: 'Apr 2026 - Present',
+            type: 'work',
+            description: 'Contributing to software development tasks and collaborating with teams to build reliable internal banking solutions while improving product quality and delivery speed.',
+            skills: ['Software Development', 'Team Collaboration', 'Problem Solving', 'Banking Domain']
+        },
+        {
+            title: 'Tutor',
             company: 'National Institute of Business Management (NIBM - Sri Lanka)',
-            period: 'Jul 2025 - Present',
+            period: 'Mar 2026 - Present',
             type: 'teaching',
             description: 'Teaching and mentoring students in software engineering, computer science, and related technical courses. Developing curriculum, conducting lectures, and guiding students through practical projects to build real-world skills.',
             skills: ['Teaching', 'Curriculum Development', 'Software Engineering', 'Mentoring', 'Project Guidance', 'Technical Training']
