@@ -1,0 +1,2 @@
+/* Netlify SPA fallback so client routes like /projects work on refresh */
+/*    /index.html   200
