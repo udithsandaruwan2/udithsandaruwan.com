@@ -14,6 +14,7 @@ const Navbar = () => {
         { name: 'Experience', path: '/', section: 'experience' },
         { name: 'Education', path: '/', section: 'education' },
         { name: 'Testimonials', path: '/', section: 'testimonials' },
+        { name: 'Contact', path: '/', section: 'contact' },
     ];
 
     const scrollToSection = (sectionId) => {

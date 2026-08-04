@@ -4,12 +4,12 @@ import { Briefcase, GraduationCap } from 'lucide-react';
 const Experience = () => {
     const experiences = [
         {
-            title: 'Trainee Software Engineer',
+            title: 'Transformation & AI Engineer Intern',
             company: 'Seylan Bank PLC',
             period: 'Apr 2026 - Present',
             type: 'work',
-            description: 'Contributing to software development tasks and collaborating with teams to build reliable internal banking solutions while improving product quality and delivery speed.',
-            skills: ['Software Development', 'Team Collaboration', 'Problem Solving', 'Banking Domain']
+            description: 'Supporting digital transformation and AI initiatives across banking workflows, collaborating with teams to explore automation opportunities, improve process efficiency, and help deliver practical technology solutions.',
+            skills: ['AI', 'Digital Transformation', 'Automation', 'Problem Solving', 'Banking Domain', 'Team Collaboration']
         },
         {
             title: 'Tutor',
