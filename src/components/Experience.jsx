@@ -4,11 +4,29 @@ import { Briefcase, GraduationCap } from 'lucide-react';
 const Experience = () => {
     const experiences = [
         {
-            title: 'AI & Transformation Engineer Intern',
+            title: 'Transformation & AI Engineer',
             company: 'Seylan Bank PLC',
-            period: 'Apr 2026 - Present',
+            period: 'Sep 2026 - Present',
             type: 'work',
-            description: 'Supporting digital transformation and AI initiatives across banking workflows, collaborating with teams to explore automation opportunities, improve process efficiency, and help deliver practical technology solutions.',
+            description: 'Driving digital transformation and AI initiatives across banking workflows, collaborating with teams to design automation opportunities, improve process efficiency, and deliver practical technology solutions.',
+            skills: ['AI', 'Digital Transformation', 'Automation', 'Problem Solving', 'Banking Domain', 'Team Collaboration']
+        },
+        {
+            title: 'CTO',
+            company: 'SEBS (PVT) LTD',
+            period: 'Aug 2026 - Present',
+            type: 'work',
+            logo: '/sebs-logo.png',
+            website: 'https://sebslabs.com',
+            description: 'Leading technology strategy and product engineering at SEBS Labs, overseeing architecture, delivery, and innovation across SaaS and AI-powered platforms.',
+            skills: ['Leadership', 'Technology Strategy', 'Product Engineering', 'AI', 'SaaS', 'Architecture']
+        },
+        {
+            title: 'Transformation & AI Engineer Intern',
+            company: 'Seylan Bank PLC',
+            period: 'Apr 2026 - Aug 2026',
+            type: 'work',
+            description: 'Supported digital transformation and AI initiatives across banking workflows, collaborating with teams to explore automation opportunities, improve process efficiency, and help deliver practical technology solutions.',
             skills: ['AI', 'Digital Transformation', 'Automation', 'Problem Solving', 'Banking Domain', 'Team Collaboration']
         },
         {
@@ -111,7 +129,27 @@ const Experience = () => {
                                         </div>
 
                                         <h3 className="text-2xl font-bold text-white mb-2">{exp.title}</h3>
-                                        <p className="text-gray-400 font-medium mb-3">{exp.company}</p>
+                                        <div className={`flex items-center gap-3 mb-3 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'} justify-center`}>
+                                            {exp.logo && (
+                                                <img
+                                                    src={exp.logo}
+                                                    alt={`${exp.company} logo`}
+                                                    className="h-8 w-8 object-contain rounded-md bg-white/5 p-1"
+                                                />
+                                            )}
+                                            {exp.website ? (
+                                                <a
+                                                    href={exp.website}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-gray-400 font-medium hover:text-white transition-colors"
+                                                >
+                                                    {exp.company}
+                                                </a>
+                                            ) : (
+                                                <p className="text-gray-400 font-medium">{exp.company}</p>
+                                            )}
+                                        </div>
                                         <p className="text-gray-400 mb-4 leading-relaxed">{exp.description}</p>
 
                                         <div className={`flex flex-wrap gap-2 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
