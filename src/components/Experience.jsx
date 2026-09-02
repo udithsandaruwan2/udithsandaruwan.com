@@ -4,15 +4,33 @@ import { Briefcase, GraduationCap } from 'lucide-react';
 const Experience = () => {
     const experiences = [
         {
-            title: 'Transformation & AI Engineer Intern',
+            title: 'Transformation & AI Engineer',
             company: 'Seylan Bank PLC',
-            period: 'Apr 2026 - Present',
+            period: 'Sep 2026 - Present',
             type: 'work',
-            description: 'Supporting digital transformation and AI initiatives across banking workflows, collaborating with teams to explore automation opportunities, improve process efficiency, and help deliver practical technology solutions.',
+            description: 'Driving digital transformation and AI initiatives across banking workflows, collaborating with teams to design automation opportunities, improve process efficiency, and deliver practical technology solutions.',
             skills: ['AI', 'Digital Transformation', 'Automation', 'Problem Solving', 'Banking Domain', 'Team Collaboration']
         },
         {
-            title: 'Tutor',
+            title: 'CTO',
+            company: 'SEBS (PVT) LTD',
+            period: 'Aug 2026 - Present',
+            type: 'work',
+            logo: '/sebs-logo.png',
+            website: 'https://sebslabs.com',
+            description: 'Leading technology strategy and product engineering at SEBS Labs, overseeing architecture, delivery, and innovation across SaaS and AI-powered platforms.',
+            skills: ['Leadership', 'Technology Strategy', 'Product Engineering', 'AI', 'SaaS', 'Architecture']
+        },
+        {
+            title: 'Transformation & AI Engineer Intern',
+            company: 'Seylan Bank PLC',
+            period: 'Apr 2026 - Aug 2026',
+            type: 'work',
+            description: 'Supported digital transformation and AI initiatives across banking workflows, collaborating with teams to explore automation opportunities, improve process efficiency, and help deliver practical technology solutions.',
+            skills: ['AI', 'Digital Transformation', 'Automation', 'Problem Solving', 'Banking Domain', 'Team Collaboration']
+        },
+        {
+            title: 'Visiting Tutor',
             company: 'National Institute of Business Management (NIBM - Sri Lanka)',
             period: 'Mar 2026 - Present',
             type: 'teaching',
@@ -20,28 +38,52 @@ const Experience = () => {
             skills: ['Teaching', 'Curriculum Development', 'Software Engineering', 'Mentoring', 'Project Guidance', 'Technical Training']
         },
         {
-            title: 'Software Engineer Intern',
+            title: 'Content Creator',
+            company: 'YouTube',
+            period: 'Feb 2026 - Present',
+            type: 'teaching',
+            description: 'Creating educational content on software engineering and technology, mentoring learners with career advice, skill development strategies, and practical guidance to support academic and professional growth.',
+            skills: ['Content Creation', 'Teaching', 'Mentoring', 'Technical Guidance', 'Career Advice', 'Skill Development']
+        },
+        {
+            title: 'Instructor',
+            company: 'National Institute of Business Management (NIBM - Sri Lanka)',
+            period: 'Jul 2025 - Jan 2026',
+            type: 'teaching',
+            description: 'Taught and mentored students in software engineering and computing courses, delivering lectures and supporting practical project work to strengthen real-world technical skills.',
+            skills: ['Teaching', 'Software Engineering', 'Mentoring', 'Curriculum Support', 'Technical Training']
+        },
+        {
+            title: 'IT Intern',
             company: 'Gampaha Wickramarachchi University of Indigenous Medicine',
-            period: 'Mar 2025 - Current',
+            period: 'Mar 2025 - Jul 2025',
             type: 'work',
-            description: 'Designed and developed web system using Django, collaborating with staff to create user-friendly and attractive online system for management purposes.',
+            description: 'Designed and developed web systems using Django, collaborating with staff to create user-friendly online tools for university management workflows.',
             skills: ['Django', 'Web Apps', 'Web Design', 'Collaboration', 'Cloud', 'Hosting', 'Linux', 'Database Designing']
         },
         {
-            title: 'Web Developer',
-            company: 'Thineth Software Solutions (PVT) LTD',
-            period: 'Mar 2024 - May 2024',
+            title: 'Web Developer & Content Writer',
+            company: 'Assetcate.com',
+            period: 'Sep 2023 - Jan 2024',
             type: 'work',
-            description: 'Designed and developed portfolio and dynamic websites using core PHP, working closely with clients to create user-friendly and attractive online stores.',
-            skills: ['PHP', 'Web Development', 'Portfolio Websites', 'Dynamic Websites', 'Client Collaboration']
+            description: 'Built and maintained web experiences while producing technical content that explained complex software concepts clearly for a broader audience.',
+            skills: ['Web Development', 'Content Writing', 'Technical Communication', 'HTML', 'Python']
         },
         {
             title: 'Web Developer',
-            company: 'Mooverly.com',
-            period: 'Jan 2023 - Apr 2023',
+            company: 'Mooverly (Pvt) Ltd',
+            period: 'Jan 2023 - Dec 2023',
             type: 'work',
             description: 'Designed and developed e-commerce websites using WordPress, collaborating with clients to create user-friendly and attractive online stores for various business models including B2C, B2B, C2C, and marketplaces.',
             skills: ['WordPress', 'E-commerce', 'Web Design', 'Client Collaboration', 'B2C', 'B2B', 'C2C', 'Marketplaces']
+        },
+        {
+            title: 'Content Writer',
+            company: 'Ebranding Bizsolutions (Pvt) Ltd',
+            period: 'Aug 2023 - Nov 2023',
+            type: 'work',
+            description: 'Wrote clear, engaging web and marketing content for clients, helping communicate product value and technical ideas in an accessible way.',
+            skills: ['Content Writing', 'SEO', 'Technical Communication', 'Marketing']
         }
     ];
 
@@ -87,7 +129,27 @@ const Experience = () => {
                                         </div>
 
                                         <h3 className="text-2xl font-bold text-white mb-2">{exp.title}</h3>
-                                        <p className="text-gray-400 font-medium mb-3">{exp.company}</p>
+                                        <div className={`flex items-center gap-3 mb-3 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'} justify-center`}>
+                                            {exp.logo && (
+                                                <img
+                                                    src={exp.logo}
+                                                    alt={`${exp.company} logo`}
+                                                    className="h-8 w-8 object-contain rounded-md bg-white/5 p-1"
+                                                />
+                                            )}
+                                            {exp.website ? (
+                                                <a
+                                                    href={exp.website}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-gray-400 font-medium hover:text-white transition-colors"
+                                                >
+                                                    {exp.company}
+                                                </a>
+                                            ) : (
+                                                <p className="text-gray-400 font-medium">{exp.company}</p>
+                                            )}
+                                        </div>
                                         <p className="text-gray-400 mb-4 leading-relaxed">{exp.description}</p>
 
                                         <div className={`flex flex-wrap gap-2 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
